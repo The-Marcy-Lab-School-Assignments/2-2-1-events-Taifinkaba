@@ -27,9 +27,23 @@ const handleDelegation = (event) => {
   }
 };
 
-
+// Q5
 const addNewRandomNumber = () => {
+  const randomNumber = Math.floor(Math.random() * 100) + 1;
+  const listItem = document.createElement('li');
+  listItem.textContent = randomNumber;
+  document.getElementById('random-numbers').appendChild(listItem);
 };
+document.getElementById('add-random-num').addEventListener('click', addNewRandomNumber);
+
+// Q6
+const removeDelegationListener = () => {
+  const dele = document.querySelector('#delegation');
+  dele.removeEventListener('click', handleDelegation);
+};
+
+document.getElementById('remove').addEventListener('click', removeDelegationListener);
+
 
 const main = () => {
   const delegationContainer = document.querySelector('#delegation');
