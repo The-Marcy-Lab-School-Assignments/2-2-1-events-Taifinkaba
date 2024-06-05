@@ -1,4 +1,5 @@
 // clicker Q1 
+/** FEEDBACK: Great job getting all test cases to pass! You are a superstar! */
 const clickButton = document.getElementById('click-button');
 
 const clickCounterHandler = () => {
