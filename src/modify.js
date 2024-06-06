@@ -1,8 +1,8 @@
 // clicker Q1 
-/** FEEDBACK: Great job getting all test cases to pass! You are a superstar! */
 const clickButton = document.getElementById('click-button');
 
 const clickCounterHandler = () => {
+  /** FEEDBACK: You can simplify this line of code by writing clickButton.dataset.clicks++ */
   let click = clickButton.dataset.clicks;
   click ++
   clickButton.dataset.clicks = click
@@ -12,17 +12,18 @@ const clickCounterHandler = () => {
 clickButton.addEventListener('click', clickCounterHandler);
 
 // Q3  cant do
-const clickCounterHandler3 = () => {
-  let click = clickButton.dataset.clicks;
-  click ++
-  clickButton.dataset.clicks = click
-  // clickButton.setAttribute('data-clicks', click.toString());
-  // clickButton.textContent = (click !== 1) ? `I've been clicked ${click} times!` : `I've been clicked 1 time.`;
-  if(click === 1){
+// const clickCounterHandler3 = () => {
+//   let click = clickButton.dataset.clicks;
+//   click ++
+//   clickButton.dataset.clicks = click
+//   // clickButton.setAttribute('data-clicks', click.toString());
+//   // clickButton.textContent = (click !== 1) ? `I've been clicked ${click} times!` : `I've been clicked 1 time.`;
+//   if(click === 1){
     
-  }
-};
-clickButton.addEventListener('click', clickCounterHandler3);
+//   }
+// };
+/** FEEDBACK: Are you targeting the correct button here? */
+// clickButton.addEventListener('click', clickCounterHandler3);
 
 
 // Q2
