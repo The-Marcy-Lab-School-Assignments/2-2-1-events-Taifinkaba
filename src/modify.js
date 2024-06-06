@@ -2,14 +2,26 @@
 const clickButton = document.getElementById('click-button');
 
 const clickCounterHandler = () => {
-  let click = parseInt(clickButton.getAttribute('data-clicks'));
-  click += 1;
-  clickButton.setAttribute('data-clicks', click.toString());
-  clickButton.textContent = `Clicked: ${click} time${click !== 1 ? 's' : ''}`;
+  let click = clickButton.dataset.clicks;
+  click ++
+  clickButton.dataset.clicks = click
+  // clickButton.setAttribute('data-clicks', click.toString());
+  clickButton.textContent = (click !== 1) ? `I've been clicked ${click} times!` : `I've been clicked ${click} time.`;
 };
 clickButton.addEventListener('click', clickCounterHandler);
 
 // Q3  cant do
+const clickCounterHandler3 = () => {
+  let click = clickButton.dataset.clicks;
+  click ++
+  clickButton.dataset.clicks = click
+  // clickButton.setAttribute('data-clicks', click.toString());
+  // clickButton.textContent = (click !== 1) ? `I've been clicked ${click} times!` : `I've been clicked 1 time.`;
+  if(click === 1){
+    
+  }
+};
+clickButton.addEventListener('click', clickCounterHandler3);
 
 
 // Q2
